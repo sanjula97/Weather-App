@@ -14,7 +14,7 @@ class UI {
     paint(weather) {
         this.location.textContent = weather.name;
         this.desc.textContent = weather.weather[0].description;
-        this.string.textContent = weather.main.temp;
+        this.string.textContent = `${weather.main.temp}F`;
         this.icon.setAttribute('src',`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
         this.humidity.textContent = `Relative humidity: ${weather.main.humidity}%`;
         this.feelsLike.textContent = `Feels like: ${weather.main.temp_min}F`;
